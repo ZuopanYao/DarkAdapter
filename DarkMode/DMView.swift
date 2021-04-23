@@ -16,7 +16,6 @@ extension DMDarkBasics where Base: UIView {
         get { attributeStore[.backgroundColor]?[self.base] as? DMColor }
         set { attributeStore[.backgroundColor] = [self.base: newValue] }
     }
-
 }
 
 extension UIView {

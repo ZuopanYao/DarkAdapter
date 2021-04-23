@@ -15,7 +15,6 @@ let  backgroundScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue
 let interfaceStyleObserver = Observable<Int>.interval(.milliseconds(500), scheduler: backgroundScheduler)
     .map{ _ -> UIUserInterfaceStyle in
         guard #available(iOS 13.0, *) else { return .light  }
-        //print("isDarkInMap = \(UITraitCollection.current.userInterfaceStyle == .dark)")
         return UITraitCollection.current.userInterfaceStyle
     }.distinctUntilChanged()
 
@@ -23,85 +22,24 @@ extension UIUserInterfaceStyle {
     var isDark: Bool { self == .dark }
 }
 
-final class DMStore<Base: NSObject> {
-    weak var base: Base?
-    init(_ base: Base) {
-        self.base = base
-    }
-}
-
-struct DMWeakStore<Element: NSObject> {
-
-    private var items: [DMStore<Element>] = []
-    init() { }
-
-    mutating func append(_ element: Element) {
-        items.append(DMStore(element))
-    }
-    
-    func contains(_ element: Element) -> Bool {
-        return items.filter({ $0.base == element }).count > 0
-    }
-}
-
-//var weakStore: [NSObject] = []
-
 public struct DMDarkBasics<Base> {
-    
-    var disposeBag: DisposeBag = .init()
     
     let base: Base
     init(_ base: Base) {
         self.base = base
-        subscribe()
     }
-    
-    func subscribe() {
-        
-        guard let object = self.base as? NSObject else {
-            return
-        }
-        
-//        if weakStore.contains(object) {
-//            return
-//        }
-//
-//        weakStore.forEach { (item) in
-//            print(CFGetRetainCount(item))
-//        }
-//        print("DMDarkBasics init")
-//
-//        weakStore.append(object)
-        interfaceStyleObserver
-            .subscribe { [self] (event) in
-                DispatchQueue.main.async {
-                    guard let newValue = event.element else { return }
-                    print("isDark = \(newValue.isDark)")
-                    interfaceStyleDidChange(newValue)
-                }
-            }.disposed(by: disposeBag)
-    }
-    
-    func interfaceStyleDidChange(_ newStyle: UIUserInterfaceStyle) {
-        
-        guard let base = base as? DMInterfaceStyleDidChangeProtocol else {
-            return
-        }
-        base.interfaceStyleDidChange(newStyle)
-    }
-    
 }
 
-public protocol BasicKitCompatible {
+public protocol DMDarkBasicsCompatible {
     
     associatedtype CompatibleType
     var dm: DMDarkBasics<CompatibleType> { get set }
 }
 
-public extension BasicKitCompatible {
+public extension DMDarkBasicsCompatible {
     
     var dm: DMDarkBasics<Self> {
-        get { DMDarkBasics(self) }
+        get {  _ = (self as? NSObject)?.observer; return DMDarkBasics(self) }
         set { }
     }
 }
@@ -110,7 +48,45 @@ protocol DMInterfaceStyleDidChangeProtocol {
     func interfaceStyleDidChange(_ newStyle: UIUserInterfaceStyle)
 }
 
-extension NSObject: BasicKitCompatible { }
+protocol DMObserverProtocol {
+    var observer: DMObserver { get }
+}
+
+typealias TargetType = NSObject & DMInterfaceStyleDidChangeProtocol
+
+class DMObserver: NSObject {
+    
+    var disposeBag: DisposeBag = .init()
+    weak var target: TargetType?
+    
+    convenience init(_ base: TargetType) {
+        self.init()
+        target = base
+        interfaceStyleObserver.subscribe { [self] (event) in
+            DispatchQueue.main.async {
+                guard let newValue = event.element else { return }
+                target?.interfaceStyleDidChange(newValue)
+            }
+        }.disposed(by: disposeBag)
+    }
+}
+
+extension NSObject: DMDarkBasicsCompatible { }
+
+var observerStore: [NSObject: DMObserver] = [:]
+extension NSObject: DMObserverProtocol {
+    
+    var observer: DMObserver {
+        if let instance = observerStore[self] {
+            return instance
+        }
+        
+        let instance = DMObserver(self)
+        observerStore[self] = instance
+        return instance
+    }
+}
+
 extension NSObject: DMInterfaceStyleDidChangeProtocol {
    @objc func interfaceStyleDidChange(_ newStyle: UIUserInterfaceStyle) { }
 }

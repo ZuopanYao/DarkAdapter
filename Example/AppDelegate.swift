@@ -7,12 +7,16 @@
 
 import UIKit
 import DarkMode
+import RxSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var disposeBag: DisposeBag = .init()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 }
