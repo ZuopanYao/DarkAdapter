@@ -63,15 +63,15 @@ extension UIView: DMSwizzlingProtocolOfUIView {
     @objc func updateDisplay() {
 
         if let color = dm.backgroundColor {
-            backgroundColor = isDark ? color.dark : color.light
+            backgroundColor = DMAdjustColor(color)
         }
         
         if let color = dm.shadowColor {
-            layer.shadowColor = (isDark ? color.dark : color.light)?.cgColor
+            layer.shadowColor = DMAdjustColor(color)?.cgColor
         }
         
         if let color = dm.borderColor {
-            layer.borderColor = (isDark ? color.dark : color.light)?.cgColor
+            layer.borderColor = DMAdjustColor(color)?.cgColor
         }
 
         if let alpha = dm.alpha {

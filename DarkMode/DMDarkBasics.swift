@@ -47,6 +47,10 @@ func DMAdjustImage(_ lightImageName: String) -> UIImage? {
     return UIImage(named: imageName)
 }
 
+func DMAdjustColor(_ color: DMColor) -> UIColor? {
+    return  isDark ? color.dark : color.light
+}
+
 func DMExchangeImplementations(_ cls: AnyClass?, _ origin: Selector, _ swizz: Selector) {
     
     let originMethod = class_getInstanceMethod(cls, origin)

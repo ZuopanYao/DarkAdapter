@@ -7,14 +7,18 @@
 
 import UIKit
 
-public typealias DMImage = (imageName: String, state: UIControl.State)
+public typealias DMStateString = (value: String, state: UIControl.State)
+public typealias DMStateColor = (color: DMColor, state: UIControl.State)
 
-let UIControlStates: [UIControl.State] = [.normal, .highlighted, .disabled, .selected]
+public typealias DMStateImage = DMStateString
+public typealias DMStateTitle = DMStateString
+
+fileprivate let UIControlStates: [UIControl.State] = [.normal, .highlighted, .disabled, .selected]
 
 extension DMDarkBasics where Base: UIButton {
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var image: DMImage? {
+    public var image: DMStateImage? {
         get { return nil }
         set {
             guard let _ = newValue else {
@@ -27,7 +31,7 @@ extension DMDarkBasics where Base: UIButton {
     }
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var backgroundImage: DMImage? {
+    public var backgroundImage: DMStateImage? {
         get { return nil }
         set {
             guard let _ = newValue else {
@@ -36,6 +40,32 @@ extension DMDarkBasics where Base: UIButton {
             let key = "\(DMKeys.backgroundImage.rawValue)\(newValue!.state.rawValue)"
             attributeStore[key, self.base] = newValue
             base.updateBackgroundImageDisplay()
+        }
+    }
+    
+    /// Only .normal, .highlighted, .disabled and .selected
+    public var title: DMStateTitle? {
+        get { return nil }
+        set {
+            guard let _ = newValue else {
+                return
+            }
+            let key = "\(DMKeys.title.rawValue)\(newValue!.state.rawValue)"
+            attributeStore[key, self.base] = newValue
+            base.updateTitleDisplay()
+        }
+    }
+    
+    /// Only .normal, .highlighted, .disabled and .selected
+    public var titleColor : DMStateColor? {
+        get { return nil }
+        set {
+            guard let _ = newValue else {
+                return
+            }
+            let key = "\(DMKeys.titleColor.rawValue)\(newValue!.state.rawValue)"
+            attributeStore[key, self.base] = newValue
+            base.updateTitleColorDisplay()
         }
     }
 }
@@ -56,36 +86,54 @@ extension UIButton: DMSwizzlingProtocolOfUIButton {
     override func updateDisplay() {
         super.updateDisplay()
         updateImageDisplay()
+        updateTitleDisplay()
+        updateTitleColorDisplay()
         updateBackgroundImageDisplay()
     }
     
-    func updateImageDisplay() {
+    fileprivate func updateImageDisplay() {
         
-        let images: [DMImage] = matchImage(key: .image)
+        let images: [DMStateImage] = match(key: .image, Type: DMStateImage.self)
         images.forEach { (image) in
-            setImage(DMAdjustImage(image.imageName), for: image.state)
+            setImage(DMAdjustImage(image.value), for: image.state)
         }
     }
     
-    func updateBackgroundImageDisplay() {
+    fileprivate func updateTitleDisplay() {
         
-        let images: [DMImage] = matchImage(key: .backgroundImage)
-        images.forEach { (image) in
-            setBackgroundImage(DMAdjustImage(image.imageName), for: image.state)
+        let titles: [DMStateTitle] = match(key: .title, Type: DMStateTitle.self)
+        titles.forEach { (title) in
+            setTitle(title.value, for: title.state)
         }
     }
     
-    func matchImage(key: DMKeys) -> [DMImage] {
+    fileprivate func updateTitleColorDisplay() {
         
-        var images: [DMImage] = []
+        let titleColors: [DMStateColor] = match(key: .titleColor, Type: DMStateColor.self)
+        titleColors.forEach { (stateSolor) in
+            setTitleColor(DMAdjustColor(stateSolor.color), for: stateSolor.state)
+        }
+    }
+
+    fileprivate func updateBackgroundImageDisplay() {
+        
+        let images: [DMStateImage] = match(key: .backgroundImage, Type: DMStateImage.self)
+        images.forEach { (image) in
+            setBackgroundImage(DMAdjustImage(image.value), for: image.state)
+        }
+    }
+    
+    fileprivate func match<Base>(key: DMKeys, Type: Base.Type) -> [Base] {
+        
+        var bases: [Base] = []
         UIControlStates.forEach { (state) in
             
             let key = "\(key.rawValue)\(state.rawValue)"
-            guard let image = attributeStore[key, self] as? DMImage else {
+            guard let base = attributeStore[key, self] as? Base else {
                 return
             }
-            images.append(image)
+            bases.append(base)
         }
-        return images
+        return bases
     }
 }

@@ -15,4 +15,6 @@ enum DMKeys: String {
     case textColor = "DMTextColor"
     case image = "DMImage"
     case backgroundImage = "DMBackgroundImage"
+    case title = "DMTitle"
+    case titleColor = "DMTitleColor"
 }
