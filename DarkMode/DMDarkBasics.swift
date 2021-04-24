@@ -6,21 +6,9 @@
 //
 
 import UIKit
-import RxSwift
 
-var attributeStore: [DMKeys: [NSObject: Any?]] = [:]
-
-let  backgroundScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue: DispatchQueue(label: "Observe.UITraitCollection.userInterfaceStyle.Queue"))
-
-let interfaceStyleObserver = Observable<Int>.interval(.milliseconds(500), scheduler: backgroundScheduler)
-    .map{ _ -> UIUserInterfaceStyle in
-        guard #available(iOS 13.0, *) else { return .light  }
-        return UITraitCollection.current.userInterfaceStyle
-    }.distinctUntilChanged()
-
-extension UIUserInterfaceStyle {
-    var isDark: Bool { self == .dark }
-}
+/// Defualt is "_dark"
+public var darkImageSuffix: String = "_dark"
 
 public struct DMDarkBasics<Base> {
     
@@ -39,54 +27,33 @@ public protocol DMDarkBasicsCompatible {
 public extension DMDarkBasicsCompatible {
     
     var dm: DMDarkBasics<Self> {
-        get {  _ = (self as? NSObject)?.observer; return DMDarkBasics(self) }
+        get { DMDarkBasics(self) }
         set { }
-    }
-}
-
-protocol DMInterfaceStyleDidChangeProtocol {
-    func interfaceStyleDidChange(_ newStyle: UIUserInterfaceStyle)
-}
-
-protocol DMObserverProtocol {
-    var observer: DMObserver { get }
-}
-
-typealias TargetType = NSObject & DMInterfaceStyleDidChangeProtocol
-
-class DMObserver: NSObject {
-    
-    var disposeBag: DisposeBag = .init()
-    weak var target: TargetType?
-    
-    convenience init(_ base: TargetType) {
-        self.init()
-        target = base
-        interfaceStyleObserver.subscribe { [self] (event) in
-            DispatchQueue.main.async {
-                guard let newValue = event.element else { return }
-                target?.interfaceStyleDidChange(newValue)
-            }
-        }.disposed(by: disposeBag)
     }
 }
 
 extension NSObject: DMDarkBasicsCompatible { }
 
-var observerStore: [NSObject: DMObserver] = [:]
-extension NSObject: DMObserverProtocol {
-    
-    var observer: DMObserver {
-        if let instance = observerStore[self] {
-            return instance
-        }
-        
-        let instance = DMObserver(self)
-        observerStore[self] = instance
-        return instance
-    }
+// MARK: - Only internal access
+let attributeStore = DMAttributeStore.shared
+
+var isDark: Bool {
+    guard #available(iOS 13.0, *) else { return false }
+    return UITraitCollection.current.userInterfaceStyle == .dark
 }
 
-extension NSObject: DMInterfaceStyleDidChangeProtocol {
-   @objc func interfaceStyleDidChange(_ newStyle: UIUserInterfaceStyle) { }
+func DMAdjustImage(_ lightImageName: String) -> UIImage? {
+    let imageName = isDark ? "\(lightImageName)\(darkImageSuffix)" : lightImageName
+    return UIImage(named: imageName)
+}
+
+func DMExchangeImplementations(_ cls: AnyClass?, _ origin: Selector, _ swizz: Selector) {
+    
+    let originMethod = class_getInstanceMethod(cls, origin)
+    let swizzMethod = class_getInstanceMethod(cls, swizz)
+    
+    guard let _ = originMethod, let _ = swizzMethod else {
+        return
+    }
+    method_exchangeImplementations(originMethod!, swizzMethod!)
 }

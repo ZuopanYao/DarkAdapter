@@ -21,6 +21,11 @@
 		B9064B992631AA6300E03753 /* DarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkMode.framework */; };
 		B9064B9A2631AA6300E03753 /* DarkMode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkMode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9064BAC2631C98B00E03753 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064BAB2631C98B00E03753 /* View.swift */; };
+		B97FB27C26330061004CE3C4 /* DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB27A26330060004CE3C4 /* DarkMode.m */; };
+		B97FB28526330732004CE3C4 /* GG.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB28426330732004CE3C4 /* GG.m */; };
+		B97FB2882633A450004CE3C4 /* DMAttributeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */; };
+		B97FB28C2633B6D8004CE3C4 /* DMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */; };
+		B97FB28F26341CFA004CE3C4 /* DMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB28E26341CFA004CE3C4 /* DMButton.swift */; };
 		FF1CFDD8DC154FA447C15585 /* Pods_DarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4DD1DB4933443C535A2846E /* Pods_DarkMode.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,13 @@
 		B9064B8F2631AA5B00E03753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9064B912631AA5B00E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9064BAB2631C98B00E03753 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B97FB27A26330060004CE3C4 /* DarkMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarkMode.m; sourceTree = "<group>"; };
+		B97FB28226330732004CE3C4 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		B97FB28326330732004CE3C4 /* GG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GG.h; sourceTree = "<group>"; };
+		B97FB28426330732004CE3C4 /* GG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GG.m; sourceTree = "<group>"; };
+		B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMAttributeStore.swift; sourceTree = "<group>"; };
+		B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMLabel.swift; sourceTree = "<group>"; };
+		B97FB28E26341CFA004CE3C4 /* DMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMButton.swift; sourceTree = "<group>"; };
 		E410C3A5646760C92E0E52E2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,8 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				B9064B6826319FA400E03753 /* DMDarkBasics.swift */,
+				B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */,
 				B9064B772631A83100E03753 /* DMKeys.swift */,
 				B9064B742631A35800E03753 /* DMView.swift */,
+				B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */,
+				B97FB28E26341CFA004CE3C4 /* DMButton.swift */,
+				B97FB27A26330060004CE3C4 /* DarkMode.m */,
 				B9064B5F26319F1200E03753 /* DarkMode.h */,
 				B9064B6026319F1200E03753 /* Info.plist */,
 			);
@@ -151,11 +167,14 @@
 				B9064B832631AA5900E03753 /* AppDelegate.swift */,
 				B9064B852631AA5900E03753 /* SceneDelegate.swift */,
 				B9064B872631AA5900E03753 /* ViewController.swift */,
+				B97FB28326330732004CE3C4 /* GG.h */,
+				B97FB28426330732004CE3C4 /* GG.m */,
 				B9064BAB2631C98B00E03753 /* View.swift */,
 				B9064B892631AA5900E03753 /* Main.storyboard */,
 				B9064B8C2631AA5B00E03753 /* Assets.xcassets */,
 				B9064B8E2631AA5B00E03753 /* LaunchScreen.storyboard */,
 				B9064B912631AA5B00E03753 /* Info.plist */,
+				B97FB28226330732004CE3C4 /* Example-Bridging-Header.h */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 					};
 					B9064B802631AA5900E03753 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -341,8 +361,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9064B782631A83100E03753 /* DMKeys.swift in Sources */,
+				B97FB28C2633B6D8004CE3C4 /* DMLabel.swift in Sources */,
+				B97FB2882633A450004CE3C4 /* DMAttributeStore.swift in Sources */,
+				B97FB27C26330061004CE3C4 /* DarkMode.m in Sources */,
 				B9064B6926319FA400E03753 /* DMDarkBasics.swift in Sources */,
 				B9064B752631A35800E03753 /* DMView.swift in Sources */,
+				B97FB28F26341CFA004CE3C4 /* DMButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9064BAC2631C98B00E03753 /* View.swift in Sources */,
+				B97FB28526330732004CE3C4 /* GG.m in Sources */,
 				B9064B882631AA5900E03753 /* ViewController.swift in Sources */,
 				B9064B842631AA5900E03753 /* AppDelegate.swift in Sources */,
 				B9064B862631AA5900E03753 /* SceneDelegate.swift in Sources */,
@@ -570,8 +595,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F6Z3RQ3U65;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +606,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = top.yaozuopan.iOS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -591,8 +619,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F6Z3RQ3U65;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,6 +630,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = top.yaozuopan.iOS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

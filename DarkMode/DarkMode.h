@@ -13,6 +13,20 @@ FOUNDATION_EXPORT double DarkModeVersionNumber;
 //! Project version string for DarkMode.
 FOUNDATION_EXPORT const unsigned char DarkModeVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <DarkMode/PublicHeader.h>
+
+@protocol DMSwizzlingProtocolOfUIView <NSObject>
+@optional
++ (void)swizzlingMomentOfUIView;
+@end
 
 
+@protocol DMSwizzlingProtocolOfUILabel <NSObject>
+@optional
++ (void)swizzlingMomentOfUILabel;
+@end
+
+
+@protocol DMSwizzlingProtocolOfUIButton <NSObject>
+@optional
++ (void)swizzlingMomentOfUIButton;
+@end

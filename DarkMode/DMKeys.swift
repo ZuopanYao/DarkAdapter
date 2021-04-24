@@ -8,5 +8,11 @@
 import Foundation
 
 enum DMKeys: String {
-    case backgroundColor = "backgroundColor"
+    case backgroundColor = "DMBackgroundColor"
+    case shadowColor = "DMShadowColor"
+    case alpha = "DMAlpha"
+    case borderColor = "DMBorderColor"
+    case textColor = "DMTextColor"
+    case image = "DMImage"
+    case backgroundImage = "DMBackgroundImage"
 }
