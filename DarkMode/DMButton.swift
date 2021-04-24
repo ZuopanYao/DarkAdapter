@@ -7,11 +7,10 @@
 
 import UIKit
 
-public typealias DMStateString = (value: String, state: UIControl.State)
+public typealias DMString = (light: String, dark: String)
+public typealias DMStateImage = (name: String, state: UIControl.State)
 public typealias DMStateColor = (color: DMColor, state: UIControl.State)
-
-public typealias DMStateImage = DMStateString
-public typealias DMStateTitle = DMStateString
+public typealias DMStateTitle = (string: DMString, state: UIControl.State)
 
 fileprivate let UIControlStates: [UIControl.State] = [.normal, .highlighted, .disabled, .selected]
 
@@ -95,7 +94,7 @@ extension UIButton: DMSwizzlingProtocolOfUIButton {
         
         let images: [DMStateImage] = match(key: .image, Type: DMStateImage.self)
         images.forEach { (image) in
-            setImage(DMAdjustImage(image.value), for: image.state)
+            setImage(DMAdjustImage(image.name), for: image.state)
         }
     }
     
@@ -103,7 +102,7 @@ extension UIButton: DMSwizzlingProtocolOfUIButton {
         
         let titles: [DMStateTitle] = match(key: .title, Type: DMStateTitle.self)
         titles.forEach { (title) in
-            setTitle(title.value, for: title.state)
+            setTitle(DMAdjustString(title.string), for: title.state)
         }
     }
     
@@ -119,7 +118,7 @@ extension UIButton: DMSwizzlingProtocolOfUIButton {
         
         let images: [DMStateImage] = match(key: .backgroundImage, Type: DMStateImage.self)
         images.forEach { (image) in
-            setBackgroundImage(DMAdjustImage(image.value), for: image.state)
+            setBackgroundImage(DMAdjustImage(image.name), for: image.state)
         }
     }
     

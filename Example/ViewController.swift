@@ -52,13 +52,15 @@ class ViewController: UIViewController {
         view.dm.backgroundColor = (.red, .blue)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [self] in
-            view.dm.backgroundColor = (.black, .purple)
+            btn1.isSelected = !btn1.isSelected
         }
         
-        label.dm.textColor = (.systemPink, .yellow)
-        btn.dm.backgroundColor = (.green, .brown)
-        btn.dm.alpha = (0.8, 0.2)
-        label.dm.backgroundColor = (.purple, .blue)
+//        label.dm.textColor = (.systemPink, .yellow)
+//        btn.dm.backgroundColor = (.green, .brown)
+//        btn.dm.alpha = (0.8, 0.2)
+//        label.dm.backgroundColor = (.purple, .blue)
+        btn1.dm.titleColor = ((.gray, .yellow), .normal)
+        btn1.dm.titleColor = ((.green, .blue), .selected)
     }
     
     override func loadView() {
@@ -70,6 +72,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doddo(sender:UIButton) {
+        
         print("kdldkdl")
         if #available(iOS 13.0, *) {
             isDark = !isDark

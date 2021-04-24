@@ -51,6 +51,10 @@ func DMAdjustColor(_ color: DMColor) -> UIColor? {
     return  isDark ? color.dark : color.light
 }
 
+func DMAdjustString(_ string: DMString) -> String {
+    return  isDark ? string.dark : string.light
+}
+
 func DMExchangeImplementations(_ cls: AnyClass?, _ origin: Selector, _ swizz: Selector) {
     
     let originMethod = class_getInstanceMethod(cls, origin)
