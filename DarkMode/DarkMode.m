@@ -27,10 +27,19 @@
 @end
 
 
-@implementation UILabel(DMSwizzlingSupportOfUIButton)
+@implementation UIButton(DMSwizzlingSupportOfUIButton)
 + (void)load {
     if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUIButton)]) {
         [[self class] swizzlingMomentOfUIButton];
+    }
+}
+@end
+
+
+@implementation UIImageView(DMSwizzlingSupportOfUIImageView)
++ (void)load {
+    if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUIImageView)]) {
+        [[self class] swizzlingMomentOfUIImageView];
     }
 }
 @end

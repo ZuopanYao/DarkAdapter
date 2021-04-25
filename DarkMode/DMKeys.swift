@@ -17,4 +17,6 @@ enum DMKeys: String {
     case backgroundImage = "DMBackgroundImage"
     case title = "DMTitle"
     case titleColor = "DMTitleColor"
+    case highlightedImage = "DMHighlightedImage"
+    case tintColor = "DMTintColor"
 }

@@ -36,6 +36,14 @@ extension DMDarkBasics where Base: UIView {
         }
     }
     
+    public var tintColor: DMColor? {
+        get { attributeStore[.tintColor, self.base] as? DMColor }
+        set {
+            attributeStore[.tintColor, self.base] = newValue
+            base.updateDisplay()
+        }
+    }
+    
     public var alpha: DMFloat? {
         get { attributeStore[.alpha, self.base] as? DMFloat }
         set {
@@ -72,6 +80,10 @@ extension UIView: DMSwizzlingProtocolOfUIView {
         
         if let color = dm.borderColor {
             layer.borderColor = DMAdjustColor(color)?.cgColor
+        }
+        
+        if let color = dm.tintColor {
+           tintColor = DMAdjustColor(color)
         }
 
         if let alpha = dm.alpha {

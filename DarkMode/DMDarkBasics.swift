@@ -43,8 +43,18 @@ var isDark: Bool {
 }
 
 func DMAdjustImage(_ lightImageName: String) -> UIImage? {
-    let imageName = isDark ? "\(lightImageName)\(darkImageSuffix)" : lightImageName
-    return UIImage(named: imageName)
+    
+    guard isDark else {
+        return UIImage(named: lightImageName)
+    }
+
+    let darkImage = "\(lightImageName)\(darkImageSuffix)"
+    guard let _ = Bundle.main.path(forResource: darkImage, ofType: "png") else {
+        print("[ DarkMode ] Light image: \(lightImageName), not found dark image: \(darkImage)")
+        return UIImage(named: lightImageName)
+    }
+    
+    return UIImage(named: darkImage)
 }
 
 func DMAdjustColor(_ color: DMColor) -> UIColor? {
