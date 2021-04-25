@@ -12,7 +12,12 @@ import RxSwift
 class ViewController: UIViewController {
 
     var disposeBag: DisposeBag = .init()
-    var isDark: Bool = false
+    lazy var isDark: Bool = {
+        guard #available(iOS 13.0, *) else {
+            return false
+        }
+        return UITraitCollection.current.userInterfaceStyle == .dark
+    }()
     
     lazy var btn: UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 50, width: 200, height: 50))
@@ -39,6 +44,12 @@ class ViewController: UIViewController {
         btn.font = UIFont.systemFont(ofSize: 20)
         return btn
     }()
+    
+    lazy var iv: UIImageView = {
+        let btn = UIImageView(frame: CGRect(x: 0, y: 300, width: 200, height: 200))
+        view.addSubview(btn)
+        return btn
+    }()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +72,18 @@ class ViewController: UIViewController {
 //        label.dm.backgroundColor = (.purple, .blue)
         btn1.dm.titleColor = ((.gray, .yellow), .normal)
         btn1.dm.titleColor = ((.green, .blue), .selected)
+        iv.dm.image = "light"
+        label.dm.textColor = (.systemPink, .yellow)
+        btn.dm.backgroundColor = (.green, .brown)
+        btn.dm.alpha = (0.8, 0.2)
+        label.dm.backgroundColor = (.purple, .blue)
+        title = isDark ? "Dark" : "Light"
+
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        title = isDark ? "Dark" : "Light"
     }
     
     override func loadView() {

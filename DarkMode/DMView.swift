@@ -36,10 +36,26 @@ extension DMDarkBasics where Base: UIView {
         }
     }
     
+    public var tintColor: DMColor? {
+        get { attributeStore[.tintColor, self.base] as? DMColor }
+        set {
+            attributeStore[.tintColor, self.base] = newValue
+            base.updateDisplay()
+        }
+    }
+    
     public var alpha: DMFloat? {
         get { attributeStore[.alpha, self.base] as? DMFloat }
         set {
             attributeStore[.alpha, self.base] = newValue
+            base.updateDisplay()
+        }
+    }
+    
+    public var shadowOpacity: DMFloat? {
+        get { attributeStore[.shadowOpacity, self.base] as? DMFloat }
+        set {
+            attributeStore[.shadowOpacity, self.base] = newValue
             base.updateDisplay()
         }
     }
@@ -73,9 +89,17 @@ extension UIView: DMSwizzlingProtocolOfUIView {
         if let color = dm.borderColor {
             layer.borderColor = DMAdjustColor(color)?.cgColor
         }
+        
+        if let color = dm.tintColor {
+           tintColor = DMAdjustColor(color)
+        }
 
         if let alpha = dm.alpha {
-            self.alpha = CGFloat(isDark ? alpha.dark : alpha.light)
+            self.alpha = CGFloat(DMAdjustFloat(alpha))
+        }
+        
+        if let opacity = dm.shadowOpacity {
+            layer.shadowOpacity = DMAdjustFloat(opacity)
         }
     }
 }
