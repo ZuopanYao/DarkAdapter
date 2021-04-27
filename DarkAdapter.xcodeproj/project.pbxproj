@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1820A87F263538CC0073919E /* DMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A87E263538CC0073919E /* DMImageView.swift */; };
 		1820A88426353D180073919E /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1820A88226353D180073919E /* light@2x.png */; };
 		1820A88526353D180073919E /* light_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1820A88326353D180073919E /* light_dark@2x.png */; };
+		185E4808263817A1007DF33B /* DALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4801263817A1007DF33B /* DALabel.swift */; };
+		185E4809263817A1007DF33B /* DAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4802263817A1007DF33B /* DAButton.swift */; };
+		185E480A263817A1007DF33B /* DAKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4803263817A1007DF33B /* DAKeys.swift */; };
+		185E480B263817A1007DF33B /* DAAttributeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4804263817A1007DF33B /* DAAttributeStore.swift */; };
+		185E480C263817A1007DF33B /* DAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4805263817A1007DF33B /* DAView.swift */; };
+		185E480D263817A1007DF33B /* DADarkBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4806263817A1007DF33B /* DADarkBasics.swift */; };
+		185E480E263817A1007DF33B /* DAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4807263817A1007DF33B /* DAImageView.swift */; };
 		7D9DB21B5BD46BC286306B53 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66260C33E44ADCEF868BB3DC /* Pods_Example.framework */; };
-		B9064B6126319F1200E03753 /* DarkMode.h in Headers */ = {isa = PBXBuildFile; fileRef = B9064B5F26319F1200E03753 /* DarkMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9064B6926319FA400E03753 /* DMDarkBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B6826319FA400E03753 /* DMDarkBasics.swift */; };
-		B9064B752631A35800E03753 /* DMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B742631A35800E03753 /* DMView.swift */; };
-		B9064B782631A83100E03753 /* DMKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B772631A83100E03753 /* DMKeys.swift */; };
+		B9064B6126319F1200E03753 /* DarkAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = B9064B5F26319F1200E03753 /* DarkAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9064B842631AA5900E03753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B832631AA5900E03753 /* AppDelegate.swift */; };
 		B9064B862631AA5900E03753 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B852631AA5900E03753 /* SceneDelegate.swift */; };
 		B9064B882631AA5900E03753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B872631AA5900E03753 /* ViewController.swift */; };
 		B9064B8B2631AA5900E03753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9064B892631AA5900E03753 /* Main.storyboard */; };
 		B9064B8D2631AA5B00E03753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9064B8C2631AA5B00E03753 /* Assets.xcassets */; };
 		B9064B902631AA5B00E03753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9064B8E2631AA5B00E03753 /* LaunchScreen.storyboard */; };
-		B9064B992631AA6300E03753 /* DarkModeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkModeKit.framework */; };
-		B9064B9A2631AA6300E03753 /* DarkModeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkModeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9064B992631AA6300E03753 /* DarkAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkAdapter.framework */; };
+		B9064B9A2631AA6300E03753 /* DarkAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9064BAC2631C98B00E03753 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064BAB2631C98B00E03753 /* View.swift */; };
-		B97FB27C26330061004CE3C4 /* DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB27A26330060004CE3C4 /* DarkMode.m */; };
-		B97FB2882633A450004CE3C4 /* DMAttributeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */; };
-		B97FB28C2633B6D8004CE3C4 /* DMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */; };
-		B97FB28F26341CFA004CE3C4 /* DMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB28E26341CFA004CE3C4 /* DMButton.swift */; };
-		FF1CFDD8DC154FA447C15585 /* Pods_DarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4DD1DB4933443C535A2846E /* Pods_DarkMode.framework */; };
+		B97FB27C26330061004CE3C4 /* DarkAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB27A26330060004CE3C4 /* DarkAdapter.m */; };
+		D99999FB43551C9E5B777795 /* Pods_DarkAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C91104FCD09BE97D75F3AB8 /* Pods_DarkAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9064B9A2631AA6300E03753 /* DarkModeKit.framework in Embed Frameworks */,
+				B9064B9A2631AA6300E03753 /* DarkAdapter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,20 +56,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1820A87E263538CC0073919E /* DMImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMImageView.swift; sourceTree = "<group>"; };
 		1820A88226353D180073919E /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
 		1820A88326353D180073919E /* light_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light_dark@2x.png"; sourceTree = "<group>"; };
+		185E4801263817A1007DF33B /* DALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALabel.swift; sourceTree = "<group>"; };
+		185E4802263817A1007DF33B /* DAButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAButton.swift; sourceTree = "<group>"; };
+		185E4803263817A1007DF33B /* DAKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAKeys.swift; sourceTree = "<group>"; };
+		185E4804263817A1007DF33B /* DAAttributeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAAttributeStore.swift; sourceTree = "<group>"; };
+		185E4805263817A1007DF33B /* DAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAView.swift; sourceTree = "<group>"; };
+		185E4806263817A1007DF33B /* DADarkBasics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DADarkBasics.swift; sourceTree = "<group>"; };
+		185E4807263817A1007DF33B /* DAImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAImageView.swift; sourceTree = "<group>"; };
+		3C91104FCD09BE97D75F3AB8 /* Pods_DarkAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DE8199B51C1A5FA5E0A5CB /* Pods-DarkAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkAdapter.release.xcconfig"; path = "Target Support Files/Pods-DarkAdapter/Pods-DarkAdapter.release.xcconfig"; sourceTree = "<group>"; };
 		5D10C30B61659F42E1727C3F /* Pods-DarkMode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMode.release.xcconfig"; path = "Target Support Files/Pods-DarkMode/Pods-DarkMode.release.xcconfig"; sourceTree = "<group>"; };
 		66260C33E44ADCEF868BB3DC /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B1985FD4131B140815C65E /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7099318B575984D5527777F9 /* Pods-DarkMode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMode.debug.xcconfig"; path = "Target Support Files/Pods-DarkMode/Pods-DarkMode.debug.xcconfig"; sourceTree = "<group>"; };
-		A4DD1DB4933443C535A2846E /* Pods_DarkMode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkMode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9064B5C26319F1200E03753 /* DarkModeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkModeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9064B5F26319F1200E03753 /* DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkMode.h; sourceTree = "<group>"; };
+		B9064B5C26319F1200E03753 /* DarkAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9064B5F26319F1200E03753 /* DarkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkAdapter.h; sourceTree = "<group>"; };
 		B9064B6026319F1200E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9064B6826319FA400E03753 /* DMDarkBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMDarkBasics.swift; sourceTree = "<group>"; };
-		B9064B742631A35800E03753 /* DMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMView.swift; sourceTree = "<group>"; };
-		B9064B772631A83100E03753 /* DMKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMKeys.swift; sourceTree = "<group>"; };
 		B9064B812631AA5900E03753 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9064B832631AA5900E03753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9064B852631AA5900E03753 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,12 +83,10 @@
 		B9064B8F2631AA5B00E03753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9064B912631AA5B00E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9064BAB2631C98B00E03753 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		B97FB27A26330060004CE3C4 /* DarkMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarkMode.m; sourceTree = "<group>"; };
+		B97FB27A26330060004CE3C4 /* DarkAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarkAdapter.m; sourceTree = "<group>"; };
 		B97FB28226330732004CE3C4 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMAttributeStore.swift; sourceTree = "<group>"; };
-		B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMLabel.swift; sourceTree = "<group>"; };
-		B97FB28E26341CFA004CE3C4 /* DMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMButton.swift; sourceTree = "<group>"; };
 		E410C3A5646760C92E0E52E2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F29841EB6393B818801E95D1 /* Pods-DarkAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkAdapter.debug.xcconfig"; path = "Target Support Files/Pods-DarkAdapter/Pods-DarkAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1CFDD8DC154FA447C15585 /* Pods_DarkMode.framework in Frameworks */,
+				D99999FB43551C9E5B777795 /* Pods_DarkAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9064B992631AA6300E03753 /* DarkModeKit.framework in Frameworks */,
+				B9064B992631AA6300E03753 /* DarkAdapter.framework in Frameworks */,
 				7D9DB21B5BD46BC286306B53 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +117,8 @@
 				5D10C30B61659F42E1727C3F /* Pods-DarkMode.release.xcconfig */,
 				E410C3A5646760C92E0E52E2 /* Pods-Example.debug.xcconfig */,
 				69B1985FD4131B140815C65E /* Pods-Example.release.xcconfig */,
+				F29841EB6393B818801E95D1 /* Pods-DarkAdapter.debug.xcconfig */,
+				53DE8199B51C1A5FA5E0A5CB /* Pods-DarkAdapter.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -122,8 +126,8 @@
 		4F2320F5852FE78CEB050073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4DD1DB4933443C535A2846E /* Pods_DarkMode.framework */,
 				66260C33E44ADCEF868BB3DC /* Pods_Example.framework */,
+				3C91104FCD09BE97D75F3AB8 /* Pods_DarkAdapter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,7 +135,7 @@
 		B9064B5226319F1200E03753 = {
 			isa = PBXGroup;
 			children = (
-				B9064B5E26319F1200E03753 /* DarkModeKit */,
+				B9064B5E26319F1200E03753 /* DarkAdapter */,
 				B9064B822631AA5900E03753 /* Example */,
 				B9064B5D26319F1200E03753 /* Products */,
 				28003D4872B094DAF165F58E /* Pods */,
@@ -142,27 +146,27 @@
 		B9064B5D26319F1200E03753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9064B5C26319F1200E03753 /* DarkModeKit.framework */,
+				B9064B5C26319F1200E03753 /* DarkAdapter.framework */,
 				B9064B812631AA5900E03753 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9064B5E26319F1200E03753 /* DarkModeKit */ = {
+		B9064B5E26319F1200E03753 /* DarkAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				B9064B6826319FA400E03753 /* DMDarkBasics.swift */,
-				B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */,
-				B9064B772631A83100E03753 /* DMKeys.swift */,
-				B9064B742631A35800E03753 /* DMView.swift */,
-				B97FB28B2633B6D8004CE3C4 /* DMLabel.swift */,
-				B97FB28E26341CFA004CE3C4 /* DMButton.swift */,
-				1820A87E263538CC0073919E /* DMImageView.swift */,
-				B97FB27A26330060004CE3C4 /* DarkMode.m */,
-				B9064B5F26319F1200E03753 /* DarkMode.h */,
+				185E4804263817A1007DF33B /* DAAttributeStore.swift */,
+				185E4802263817A1007DF33B /* DAButton.swift */,
+				185E4806263817A1007DF33B /* DADarkBasics.swift */,
+				185E4807263817A1007DF33B /* DAImageView.swift */,
+				185E4803263817A1007DF33B /* DAKeys.swift */,
+				185E4801263817A1007DF33B /* DALabel.swift */,
+				185E4805263817A1007DF33B /* DAView.swift */,
+				B97FB27A26330060004CE3C4 /* DarkAdapter.m */,
+				B9064B5F26319F1200E03753 /* DarkAdapter.h */,
 				B9064B6026319F1200E03753 /* Info.plist */,
 			);
-			path = DarkModeKit;
+			path = DarkAdapter;
 			sourceTree = "<group>";
 		};
 		B9064B822631AA5900E03753 /* Example */ = {
@@ -190,16 +194,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9064B6126319F1200E03753 /* DarkMode.h in Headers */,
+				B9064B6126319F1200E03753 /* DarkAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9064B5B26319F1200E03753 /* DarkModeKit */ = {
+		B9064B5B26319F1200E03753 /* DarkAdapter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkModeKit" */;
+			buildConfigurationList = B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkAdapter" */;
 			buildPhases = (
 				6BCB92DC517C1769E49E356C /* [CP] Check Pods Manifest.lock */,
 				B9064B5726319F1200E03753 /* Headers */,
@@ -211,9 +215,9 @@
 			);
 			dependencies = (
 			);
-			name = DarkModeKit;
+			name = DarkAdapter;
 			productName = DarkMode;
-			productReference = B9064B5C26319F1200E03753 /* DarkModeKit.framework */;
+			productReference = B9064B5C26319F1200E03753 /* DarkAdapter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9064B802631AA5900E03753 /* Example */ = {
@@ -256,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkModeKit" */;
+			buildConfigurationList = B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkAdapter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,7 +273,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9064B5B26319F1200E03753 /* DarkModeKit */,
+				B9064B5B26319F1200E03753 /* DarkAdapter */,
 				B9064B802631AA5900E03753 /* Example */,
 			);
 		};
@@ -330,7 +334,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DarkMode-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DarkAdapter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,14 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9064B782631A83100E03753 /* DMKeys.swift in Sources */,
-				B97FB28C2633B6D8004CE3C4 /* DMLabel.swift in Sources */,
-				B97FB2882633A450004CE3C4 /* DMAttributeStore.swift in Sources */,
-				1820A87F263538CC0073919E /* DMImageView.swift in Sources */,
-				B97FB27C26330061004CE3C4 /* DarkMode.m in Sources */,
-				B9064B6926319FA400E03753 /* DMDarkBasics.swift in Sources */,
-				B9064B752631A35800E03753 /* DMView.swift in Sources */,
-				B97FB28F26341CFA004CE3C4 /* DMButton.swift in Sources */,
+				185E480A263817A1007DF33B /* DAKeys.swift in Sources */,
+				185E4808263817A1007DF33B /* DALabel.swift in Sources */,
+				185E480D263817A1007DF33B /* DADarkBasics.swift in Sources */,
+				185E480C263817A1007DF33B /* DAView.swift in Sources */,
+				185E4809263817A1007DF33B /* DAButton.swift in Sources */,
+				185E480B263817A1007DF33B /* DAAttributeStore.swift in Sources */,
+				B97FB27C26330061004CE3C4 /* DarkAdapter.m in Sources */,
+				185E480E263817A1007DF33B /* DAImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +397,7 @@
 /* Begin PBXTargetDependency section */
 		B9064B9C2631AA6300E03753 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9064B5B26319F1200E03753 /* DarkModeKit */;
+			target = B9064B5B26319F1200E03753 /* DarkAdapter */;
 			targetProxy = B9064B9B2631AA6300E03753 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,7 +546,7 @@
 		};
 		B9064B6526319F1200E03753 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7099318B575984D5527777F9 /* Pods-DarkMode.debug.xcconfig */;
+			baseConfigurationReference = F29841EB6393B818801E95D1 /* Pods-DarkAdapter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,7 +555,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DarkMode/Info.plist;
+				INFOPLIST_FILE = DarkAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +574,7 @@
 		};
 		B9064B6626319F1200E03753 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D10C30B61659F42E1727C3F /* Pods-DarkMode.release.xcconfig */;
+			baseConfigurationReference = 53DE8199B51C1A5FA5E0A5CB /* Pods-DarkAdapter.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,7 +583,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DarkMode/Info.plist;
+				INFOPLIST_FILE = DarkAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,7 +649,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkModeKit" */ = {
+		B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9064B6226319F1200E03753 /* Debug */,
@@ -654,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkModeKit" */ = {
+		B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9064B6526319F1200E03753 /* Debug */,

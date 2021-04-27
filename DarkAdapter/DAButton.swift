@@ -1,5 +1,5 @@
 //
-//  DMButton.swift
+//  DAButton.swift
 //  DarkMode
 //
 //  Created by Harvey on 2021/4/24.
@@ -7,78 +7,78 @@
 
 import UIKit
 
-public typealias DMString = (light: String, dark: String)
-public typealias DMStateImage = (name: String, state: UIControl.State)
-public typealias DMStateColor = (color: DMColor, state: UIControl.State)
-public typealias DMStateTitle = (string: DMString, state: UIControl.State)
+public typealias DAString = (light: String, dark: String)
+public typealias DAStateImage = (name: String, state: UIControl.State)
+public typealias DAStateColor = (color: DAColor, state: UIControl.State)
+public typealias DAStateTitle = (string: DAString, state: UIControl.State)
 
 fileprivate let UIControlStates: [UIControl.State] = [.normal, .highlighted, .disabled, .selected]
 
-extension DMDarkBasics where Base: UIButton {
+extension DADarkBasics where Base: UIButton {
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var image: DMStateImage? {
+    public var image: DAStateImage? {
         get { return nil }
         set {
             guard let _ = newValue else {
                 return
             }
-            let key = "\(DMKeys.image.rawValue)\(newValue!.state.rawValue)"
+            let key = "\(DAKeys.image.rawValue)\(newValue!.state.rawValue)"
             attributeStore[key, self.base] = newValue
             base.updateImageDisplay()
         }
     }
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var backgroundImage: DMStateImage? {
+    public var backgroundImage: DAStateImage? {
         get { return nil }
         set {
             guard let _ = newValue else {
                 return
             }
-            let key = "\(DMKeys.backgroundImage.rawValue)\(newValue!.state.rawValue)"
+            let key = "\(DAKeys.backgroundImage.rawValue)\(newValue!.state.rawValue)"
             attributeStore[key, self.base] = newValue
             base.updateBackgroundImageDisplay()
         }
     }
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var title: DMStateTitle? {
+    public var title: DAStateTitle? {
         get { return nil }
         set {
             guard let _ = newValue else {
                 return
             }
-            let key = "\(DMKeys.title.rawValue)\(newValue!.state.rawValue)"
+            let key = "\(DAKeys.title.rawValue)\(newValue!.state.rawValue)"
             attributeStore[key, self.base] = newValue
             base.updateTitleDisplay()
         }
     }
     
     /// Only .normal, .highlighted, .disabled and .selected
-    public var titleColor : DMStateColor? {
+    public var titleColor : DAStateColor? {
         get { return nil }
         set {
             guard let _ = newValue else {
                 return
             }
-            let key = "\(DMKeys.titleColor.rawValue)\(newValue!.state.rawValue)"
+            let key = "\(DAKeys.titleColor.rawValue)\(newValue!.state.rawValue)"
             attributeStore[key, self.base] = newValue
             base.updateTitleColorDisplay()
         }
     }
 }
 
-extension UIButton: DMSwizzlingProtocolOfUIButton {
+extension UIButton: DASwizzlingProtocolOfUIButton {
     
     public static func swizzlingMomentOfUIButton() {
-        DMExchangeImplementations(UIButton.self,
+        DAExchangeImplementations(UIButton.self,
                                   #selector(UIButton.traitCollectionDidChange(_:)),
-                                  #selector(UIButton.dmUIButton_traitCollectionDidChange(_:)))
+                                  #selector(UIButton.daUIButton_traitCollectionDidChange(_:)))
     }
     
-    @objc func dmUIButton_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-       self.dmUIButton_traitCollectionDidChange(previousTraitCollection)
+    @objc func daUIButton_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+       self.daUIButton_traitCollectionDidChange(previousTraitCollection)
        updateDisplay()
    }
    
@@ -92,37 +92,37 @@ extension UIButton: DMSwizzlingProtocolOfUIButton {
     
     fileprivate func updateImageDisplay() {
         
-        let images: [DMStateImage] = match(key: .image, Type: DMStateImage.self)
+        let images: [DAStateImage] = match(key: .image, Type: DAStateImage.self)
         images.forEach { (image) in
-            setImage(DMAdjustImage(image.name), for: image.state)
+            setImage(DAAdjustImage(image.name), for: image.state)
         }
     }
     
     fileprivate func updateTitleDisplay() {
         
-        let titles: [DMStateTitle] = match(key: .title, Type: DMStateTitle.self)
+        let titles: [DAStateTitle] = match(key: .title, Type: DAStateTitle.self)
         titles.forEach { (title) in
-            setTitle(DMAdjustString(title.string), for: title.state)
+            setTitle(DAAdjustString(title.string), for: title.state)
         }
     }
     
     fileprivate func updateTitleColorDisplay() {
         
-        let titleColors: [DMStateColor] = match(key: .titleColor, Type: DMStateColor.self)
+        let titleColors: [DAStateColor] = match(key: .titleColor, Type: DAStateColor.self)
         titleColors.forEach { (stateSolor) in
-            setTitleColor(DMAdjustColor(stateSolor.color), for: stateSolor.state)
+            setTitleColor(DAAdjustColor(stateSolor.color), for: stateSolor.state)
         }
     }
 
     fileprivate func updateBackgroundImageDisplay() {
         
-        let images: [DMStateImage] = match(key: .backgroundImage, Type: DMStateImage.self)
+        let images: [DAStateImage] = match(key: .backgroundImage, Type: DAStateImage.self)
         images.forEach { (image) in
-            setBackgroundImage(DMAdjustImage(image.name), for: image.state)
+            setBackgroundImage(DAAdjustImage(image.name), for: image.state)
         }
     }
     
-    fileprivate func match<Base>(key: DMKeys, Type: Base.Type) -> [Base] {
+    fileprivate func match<Base>(key: DAKeys, Type: Base.Type) -> [Base] {
         
         var bases: [Base] = []
         UIControlStates.forEach { (state) in

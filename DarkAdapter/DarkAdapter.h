@@ -14,25 +14,25 @@ FOUNDATION_EXPORT double DarkModeVersionNumber;
 FOUNDATION_EXPORT const unsigned char DarkModeVersionString[];
 
 
-@protocol DMSwizzlingProtocolOfUIView <NSObject>
+@protocol DASwizzlingProtocolOfUIView <NSObject>
 @optional
 + (void)swizzlingMomentOfUIView;
 @end
 
 
-@protocol DMSwizzlingProtocolOfUILabel <NSObject>
+@protocol DASwizzlingProtocolOfUILabel <NSObject>
 @optional
 + (void)swizzlingMomentOfUILabel;
 @end
 
 
-@protocol DMSwizzlingProtocolOfUIButton <NSObject>
+@protocol DASwizzlingProtocolOfUIButton <NSObject>
 @optional
 + (void)swizzlingMomentOfUIButton;
 @end
 
 
-@protocol DMSwizzlingProtocolOfUIImageView <NSObject>
+@protocol DASwizzlingProtocolOfUIImageView <NSObject>
 @optional
 + (void)swizzlingMomentOfUIImageView;
 @end

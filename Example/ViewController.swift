@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import DarkMode
+import DarkAdapter
 import RxSwift
 
 class ViewController: UIViewController {
@@ -60,23 +60,23 @@ class ViewController: UIViewController {
         _ = label
         
         view.backgroundColor = .white
-        view.dm.backgroundColor = (.red, .blue)
+        view.da.backgroundColor = (.red, .blue)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [self] in
             btn1.isSelected = !btn1.isSelected
         }
         
-//        label.dm.textColor = (.systemPink, .yellow)
-//        btn.dm.backgroundColor = (.green, .brown)
-//        btn.dm.alpha = (0.8, 0.2)
-//        label.dm.backgroundColor = (.purple, .blue)
-        btn1.dm.titleColor = ((.gray, .yellow), .normal)
-        btn1.dm.titleColor = ((.green, .blue), .selected)
-        iv.dm.image = "light"
-        label.dm.textColor = (.systemPink, .yellow)
-        btn.dm.backgroundColor = (.green, .brown)
-        btn.dm.alpha = (0.8, 0.2)
-        label.dm.backgroundColor = (.purple, .blue)
+//        label.da.textColor = (.systemPink, .yellow)
+//        btn.da.backgroundColor = (.green, .brown)
+//        btn.da.alpha = (0.8, 0.2)
+//        label.da.backgroundColor = (.purple, .blue)
+        btn1.da.titleColor = ((.gray, .yellow), .normal)
+        btn1.da.titleColor = ((.green, .blue), .selected)
+        iv.da.image = "light"
+        label.da.textColor = (.systemPink, .yellow)
+        btn.da.backgroundColor = (.green, .brown)
+        btn.da.alpha = (0.8, 0.2)
+        label.da.backgroundColor = (.purple, .blue)
         title = isDark ? "Dark" : "Light"
 
     }

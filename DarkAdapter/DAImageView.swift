@@ -1,5 +1,5 @@
 //
-//  DMImageView.swift
+//  DAImageView.swift
 //  DarkMode
 //
 //  Created by Harvey on 2021/4/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension DMDarkBasics where Base: UIImageView {
+extension DADarkBasics where Base: UIImageView {
     
     public var image: String? {
         get { attributeStore[.image, self.base] as? String }
@@ -26,28 +26,28 @@ extension DMDarkBasics where Base: UIImageView {
     }
 }
 
-extension UIImageView: DMSwizzlingProtocolOfUIImageView {
+extension UIImageView: DASwizzlingProtocolOfUIImageView {
     
     public static func swizzlingMomentOfUIImageView() {
-        DMExchangeImplementations(UIImageView.self,
+        DAExchangeImplementations(UIImageView.self,
                                   #selector(UIImageView.traitCollectionDidChange(_:)),
-                                  #selector(UIImageView.dmUIImageView_traitCollectionDidChange(_:)))
+                                  #selector(UIImageView.daUIImageView_traitCollectionDidChange(_:)))
     }
     
-     @objc func dmUIImageView_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        self.dmUIImageView_traitCollectionDidChange(previousTraitCollection)
+     @objc func daUIImageView_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.daUIImageView_traitCollectionDidChange(previousTraitCollection)
         updateDisplay()
     }
     
     override func updateDisplay() {
         super.updateDisplay()
         
-        if let imageName = dm.image {
-            image = DMAdjustImage(imageName)
+        if let imageName = da.image {
+            image = DAAdjustImage(imageName)
         }
         
-        if let imageName = dm.highlightedImage {
-            highlightedImage = DMAdjustImage(imageName)
+        if let imageName = da.highlightedImage {
+            highlightedImage = DAAdjustImage(imageName)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  DMAttributeStore.swift
+//  DAAttributeStore.swift
 //  DarkMode
 //
 //  Created by Harvey on 2021/4/24.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-class DMAttributeStore {
+class DAAttributeStore {
     
-    static let shared = DMAttributeStore()
+    static let shared = DAAttributeStore()
     
     private init() { }
     private var attributes: [String: [[NSObject: Any?]]] = [:]
     
-    subscript(_ key: DMKeys, _ owner: NSObject) -> Any? {
+    subscript(_ key: DAKeys, _ owner: NSObject) -> Any? {
         get { self[key.rawValue, owner] }
         set { self[key.rawValue, owner] = newValue }
     }

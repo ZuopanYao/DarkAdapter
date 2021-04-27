@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
  exit 0
 fi
 
-MODULE='DarkModeKit'
+MODULE='DarkAdapter'
 SPECS='wyspecs-ios'
 
 cp example.podspec $MODULE.podspec

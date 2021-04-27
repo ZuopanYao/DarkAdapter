@@ -6,10 +6,10 @@
 //  Copyright © 2021 yaozuopan. All rights reserved.
 //
 
-#import "DarkMode.h"
+#import "DarkAdapter.h"
 #import <UIKit/UIKit.h>
 
-@implementation UIView(DMSwizzlingSupportOfUIView)
+@implementation UIView(DASwizzlingSupportOfUIView)
 + (void)load {
     if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUIView)]) {
         [[self class] swizzlingMomentOfUIView];
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation UILabel(DMSwizzlingSupportOfUILabel)
+@implementation UILabel(DASwizzlingSupportOfUILabel)
 + (void)load {
     if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUILabel)]) {
         [[self class] swizzlingMomentOfUILabel];
@@ -27,7 +27,7 @@
 @end
 
 
-@implementation UIButton(DMSwizzlingSupportOfUIButton)
+@implementation UIButton(DASwizzlingSupportOfUIButton)
 + (void)load {
     if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUIButton)]) {
         [[self class] swizzlingMomentOfUIButton];
@@ -36,7 +36,7 @@
 @end
 
 
-@implementation UIImageView(DMSwizzlingSupportOfUIImageView)
+@implementation UIImageView(DASwizzlingSupportOfUIImageView)
 + (void)load {
     if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUIImageView)]) {
         [[self class] swizzlingMomentOfUIImageView];

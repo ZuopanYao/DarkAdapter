@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import DarkMode
+import DarkAdapter
 import RxSwift
 //import Combine
 
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        DarkMode.darkImageSuffix = "_dark"
+        DarkAdapter.darkImageSuffix = "_dark"
         
         return true
     }

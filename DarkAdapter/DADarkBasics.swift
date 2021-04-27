@@ -1,5 +1,5 @@
 //
-//  DMDarkBasics.swift
+//  DADarkBasics.swift
 //  DarkMode
 //
 //  Created by Harvey on 2021/4/22.
@@ -10,7 +10,7 @@ import UIKit
 /// Defualt is "_dark"
 public var darkImageSuffix: String = "_dark"
 
-public struct DMDarkBasics<Base> {
+public struct DADarkBasics<Base> {
     
     let base: Base
     init(_ base: Base) {
@@ -18,35 +18,35 @@ public struct DMDarkBasics<Base> {
     }
 }
 
-public protocol DMDarkBasicsCompatible {
+public protocol DADarkBasicsCompatible {
     
     associatedtype CompatibleType
-    var dm: DMDarkBasics<CompatibleType> { get set }
+    var da: DADarkBasics<CompatibleType> { get set }
 }
 
-public extension DMDarkBasicsCompatible {
+public extension DADarkBasicsCompatible {
     
-    var dm: DMDarkBasics<Self> {
-        get { DMDarkBasics(self) }
+    var da: DADarkBasics<Self> {
+        get { DADarkBasics(self) }
         set { }
     }
 }
 
-extension NSObject: DMDarkBasicsCompatible { }
+extension NSObject: DADarkBasicsCompatible { }
 
-public func DMAdjustValue<Base>(_ light: Base?, _ dark: Base?) -> Base? {
+public func DAAdjustValue<Base>(_ light: Base?, _ dark: Base?) -> Base? {
     return  isDark ? dark : light
 }
 
 // MARK: - Only internal access
-let attributeStore = DMAttributeStore.shared
+let attributeStore = DAAttributeStore.shared
 
 var isDark: Bool {
     guard #available(iOS 13.0, *) else { return false }
     return UITraitCollection.current.userInterfaceStyle == .dark
 }
 
-func DMAdjustImage(_ lightImageName: String) -> UIImage? {
+func DAAdjustImage(_ lightImageName: String) -> UIImage? {
     
     guard isDark else {
         return UIImage(named: lightImageName)
@@ -61,19 +61,19 @@ func DMAdjustImage(_ lightImageName: String) -> UIImage? {
     return UIImage(named: darkImage)
 }
 
-func DMAdjustColor(_ color: DMColor) -> UIColor? {
-    return  DMAdjustValue(color.light, color.dark)
+func DAAdjustColor(_ color: DAColor) -> UIColor? {
+    return  DAAdjustValue(color.light, color.dark)
 }
 
-func DMAdjustString(_ string: DMString) -> String {
-    return  DMAdjustValue(string.light, string.dark)!
+func DAAdjustString(_ string: DAString) -> String {
+    return  DAAdjustValue(string.light, string.dark)!
 }
 
-func DMAdjustFloat(_ float: DMFloat) -> Float {
-    return  DMAdjustValue(float.light, float.dark)!
+func DAAdjustFloat(_ float: DAFloat) -> Float {
+    return  DAAdjustValue(float.light, float.dark)!
 }
 
-func DMExchangeImplementations(_ cls: AnyClass?, _ origin: Selector, _ swizz: Selector) {
+func DAExchangeImplementations(_ cls: AnyClass?, _ origin: Selector, _ swizz: Selector) {
     
     let originMethod = class_getInstanceMethod(cls, origin)
     let swizzMethod = class_getInstanceMethod(cls, swizz)
