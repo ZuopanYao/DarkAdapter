@@ -21,8 +21,8 @@
 		B9064B8B2631AA5900E03753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9064B892631AA5900E03753 /* Main.storyboard */; };
 		B9064B8D2631AA5B00E03753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9064B8C2631AA5B00E03753 /* Assets.xcassets */; };
 		B9064B902631AA5B00E03753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9064B8E2631AA5B00E03753 /* LaunchScreen.storyboard */; };
-		B9064B992631AA6300E03753 /* DarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkMode.framework */; };
-		B9064B9A2631AA6300E03753 /* DarkMode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkMode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9064B992631AA6300E03753 /* DarkModeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkModeKit.framework */; };
+		B9064B9A2631AA6300E03753 /* DarkModeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkModeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9064BAC2631C98B00E03753 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064BAB2631C98B00E03753 /* View.swift */; };
 		B97FB27C26330061004CE3C4 /* DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB27A26330060004CE3C4 /* DarkMode.m */; };
 		B97FB2882633A450004CE3C4 /* DMAttributeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FB2872633A450004CE3C4 /* DMAttributeStore.swift */; };
@@ -48,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9064B9A2631AA6300E03753 /* DarkMode.framework in Embed Frameworks */,
+				B9064B9A2631AA6300E03753 /* DarkModeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +64,7 @@
 		69B1985FD4131B140815C65E /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7099318B575984D5527777F9 /* Pods-DarkMode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMode.debug.xcconfig"; path = "Target Support Files/Pods-DarkMode/Pods-DarkMode.debug.xcconfig"; sourceTree = "<group>"; };
 		A4DD1DB4933443C535A2846E /* Pods_DarkMode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkMode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9064B5C26319F1200E03753 /* DarkMode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkMode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9064B5C26319F1200E03753 /* DarkModeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkModeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9064B5F26319F1200E03753 /* DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkMode.h; sourceTree = "<group>"; };
 		B9064B6026319F1200E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9064B6826319FA400E03753 /* DMDarkBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMDarkBasics.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9064B992631AA6300E03753 /* DarkMode.framework in Frameworks */,
+				B9064B992631AA6300E03753 /* DarkModeKit.framework in Frameworks */,
 				7D9DB21B5BD46BC286306B53 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,7 +131,7 @@
 		B9064B5226319F1200E03753 = {
 			isa = PBXGroup;
 			children = (
-				B9064B5E26319F1200E03753 /* DarkMode */,
+				B9064B5E26319F1200E03753 /* DarkModeKit */,
 				B9064B822631AA5900E03753 /* Example */,
 				B9064B5D26319F1200E03753 /* Products */,
 				28003D4872B094DAF165F58E /* Pods */,
@@ -142,13 +142,13 @@
 		B9064B5D26319F1200E03753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9064B5C26319F1200E03753 /* DarkMode.framework */,
+				B9064B5C26319F1200E03753 /* DarkModeKit.framework */,
 				B9064B812631AA5900E03753 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9064B5E26319F1200E03753 /* DarkMode */ = {
+		B9064B5E26319F1200E03753 /* DarkModeKit */ = {
 			isa = PBXGroup;
 			children = (
 				B9064B6826319FA400E03753 /* DMDarkBasics.swift */,
@@ -162,7 +162,7 @@
 				B9064B5F26319F1200E03753 /* DarkMode.h */,
 				B9064B6026319F1200E03753 /* Info.plist */,
 			);
-			path = DarkMode;
+			path = DarkModeKit;
 			sourceTree = "<group>";
 		};
 		B9064B822631AA5900E03753 /* Example */ = {
@@ -197,9 +197,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9064B5B26319F1200E03753 /* DarkMode */ = {
+		B9064B5B26319F1200E03753 /* DarkModeKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkMode" */;
+			buildConfigurationList = B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkModeKit" */;
 			buildPhases = (
 				6BCB92DC517C1769E49E356C /* [CP] Check Pods Manifest.lock */,
 				B9064B5726319F1200E03753 /* Headers */,
@@ -211,9 +211,9 @@
 			);
 			dependencies = (
 			);
-			name = DarkMode;
+			name = DarkModeKit;
 			productName = DarkMode;
-			productReference = B9064B5C26319F1200E03753 /* DarkMode.framework */;
+			productReference = B9064B5C26319F1200E03753 /* DarkModeKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9064B802631AA5900E03753 /* Example */ = {
@@ -256,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkMode" */;
+			buildConfigurationList = B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkModeKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,7 +269,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9064B5B26319F1200E03753 /* DarkMode */,
+				B9064B5B26319F1200E03753 /* DarkModeKit */,
 				B9064B802631AA5900E03753 /* Example */,
 			);
 		};
@@ -393,7 +393,7 @@
 /* Begin PBXTargetDependency section */
 		B9064B9C2631AA6300E03753 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9064B5B26319F1200E03753 /* DarkMode */;
+			target = B9064B5B26319F1200E03753 /* DarkModeKit */;
 			targetProxy = B9064B9B2631AA6300E03753 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,7 +645,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkMode" */ = {
+		B9064B5626319F1200E03753 /* Build configuration list for PBXProject "DarkModeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9064B6226319F1200E03753 /* Debug */,
@@ -654,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkMode" */ = {
+		B9064B6426319F1200E03753 /* Build configuration list for PBXNativeTarget "DarkModeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9064B6526319F1200E03753 /* Debug */,

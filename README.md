@@ -10,7 +10,7 @@
 
 ### CocoaPods 集成
 ```
-pod 'DarkMode'
+pod 'DarkModeKit'
 ```
 
 ### 引用
