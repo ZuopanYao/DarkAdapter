@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "DarkModeKit"
+  spec.name         = "DarkAdapter"
   spec.version      = "{v}"
   spec.summary      = "适配黑暗模式库"
 
@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  =  "DarkModeKit/*.{h,m,swift}"
+  spec.source_files  =  "DarkAdapter/*.{h,m,swift}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
