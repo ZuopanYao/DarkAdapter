@@ -36,3 +36,9 @@ FOUNDATION_EXPORT const unsigned char DarkModeVersionString[];
 @optional
 + (void)swizzlingMomentOfUIImageView;
 @end
+
+
+@protocol DASwizzlingProtocolOfUITextView <NSObject>
+@optional
++ (void)swizzlingMomentOfUITextView;
+@end

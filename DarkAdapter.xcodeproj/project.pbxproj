@@ -16,6 +16,7 @@
 		185E480C263817A1007DF33B /* DAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4805263817A1007DF33B /* DAView.swift */; };
 		185E480D263817A1007DF33B /* DADarkBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4806263817A1007DF33B /* DADarkBasics.swift */; };
 		185E480E263817A1007DF33B /* DAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4807263817A1007DF33B /* DAImageView.swift */; };
+		18ABF09E264662150067A1B5 /* DATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABF09D264662150067A1B5 /* DATextView.swift */; };
 		7D9DB21B5BD46BC286306B53 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66260C33E44ADCEF868BB3DC /* Pods_Example.framework */; };
 		B9064B6126319F1200E03753 /* DarkAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = B9064B5F26319F1200E03753 /* DarkAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9064B842631AA5900E03753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B832631AA5900E03753 /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		185E4805263817A1007DF33B /* DAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAView.swift; sourceTree = "<group>"; };
 		185E4806263817A1007DF33B /* DADarkBasics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DADarkBasics.swift; sourceTree = "<group>"; };
 		185E4807263817A1007DF33B /* DAImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAImageView.swift; sourceTree = "<group>"; };
+		18ABF09D264662150067A1B5 /* DATextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATextView.swift; sourceTree = "<group>"; };
 		3C91104FCD09BE97D75F3AB8 /* Pods_DarkAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE8199B51C1A5FA5E0A5CB /* Pods-DarkAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkAdapter.release.xcconfig"; path = "Target Support Files/Pods-DarkAdapter/Pods-DarkAdapter.release.xcconfig"; sourceTree = "<group>"; };
 		5D10C30B61659F42E1727C3F /* Pods-DarkMode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMode.release.xcconfig"; path = "Target Support Files/Pods-DarkMode/Pods-DarkMode.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				185E4803263817A1007DF33B /* DAKeys.swift */,
 				185E4801263817A1007DF33B /* DALabel.swift */,
 				185E4805263817A1007DF33B /* DAView.swift */,
+				18ABF09D264662150067A1B5 /* DATextView.swift */,
 				B97FB27A26330060004CE3C4 /* DarkAdapter.m */,
 				B9064B5F26319F1200E03753 /* DarkAdapter.h */,
 				B9064B6026319F1200E03753 /* Info.plist */,
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185E480A263817A1007DF33B /* DAKeys.swift in Sources */,
+				18ABF09E264662150067A1B5 /* DATextView.swift in Sources */,
 				185E4808263817A1007DF33B /* DALabel.swift in Sources */,
 				185E480D263817A1007DF33B /* DADarkBasics.swift in Sources */,
 				185E480C263817A1007DF33B /* DAView.swift in Sources */,

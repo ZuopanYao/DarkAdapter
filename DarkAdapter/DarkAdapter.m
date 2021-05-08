@@ -43,3 +43,12 @@
     }
 }
 @end
+
+
+@implementation UITextView(DASwizzlingSupportOfUITextView)
++ (void)load {
+    if ([[self class] respondsToSelector:@selector(swizzlingMomentOfUITextView)]) {
+        [[self class] swizzlingMomentOfUITextView];
+    }
+}
+@end
