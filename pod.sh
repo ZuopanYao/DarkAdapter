@@ -9,9 +9,9 @@ if [ -z "$1" ]; then
 fi
 
 MODULE='DarkAdapter'
-SPECS='wyspecs-ios'
+SPECS='Specs'
 
-cp example.podspec $MODULE.podspec
+cp podspec.example $MODULE.podspec
 REPLACE=`sed "s/{v}/$1/g" $MODULE.podspec`
 echo "$REPLACE" > $MODULE.podspec
 
@@ -34,3 +34,6 @@ git commit -m "$MODULE-$1"
 git push
 
 echo 'Done'
+
+# cocoapods specs
+pod trunk push "../$MODULE/$MODULE.podspec" --allow-warnings
