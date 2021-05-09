@@ -1,6 +1,6 @@
 //
 //  DADarkBasics.swift
-//  DarkMode
+//  DarkAdapter
 //
 //  Created by Harvey on 2021/4/22.
 //
@@ -54,7 +54,7 @@ func DAAdjustImage(_ lightImageName: String) -> UIImage? {
 
     let darkImage = "\(lightImageName)\(darkImageSuffix)"
     guard let _ = Bundle.main.path(forResource: darkImage, ofType: "png") else {
-        print("[ DarkMode ] Light image: \(lightImageName), not found dark image: \(darkImage)")
+        print("[ DarkAdapter ] Light image: \(lightImageName), not found dark image: \(darkImage)")
         return UIImage(named: lightImageName)
     }
     

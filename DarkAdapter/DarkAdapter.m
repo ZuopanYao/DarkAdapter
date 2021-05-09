@@ -1,5 +1,5 @@
 //
-//  DarkMode.m
+//  DarkAdapter.m
 //  
 //
 //  Created by yaozuopan on 2021/03/17.

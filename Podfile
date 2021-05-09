@@ -5,7 +5,7 @@ target 'DarkAdapter' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for DarkMode
+  # Pods for DarkAdapter
 pod 'RxSwift'
 end
 
@@ -13,6 +13,6 @@ target 'Example' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for DarkMode
+  # Pods for DarkAdapter
 pod 'RxSwift'
 end
