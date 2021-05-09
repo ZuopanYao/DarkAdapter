@@ -62,10 +62,9 @@ extension DADarkBasics where Base: UIView {
 }
 
 
-extension UIView: DASwizzlingProtocolOfUIView {
+extension UIView: DASwizzlingProtocol {
    
-    public static func swizzlingMomentOfUIView() {
-   
+    @objc class func swizzlingMoment() {
         DAExchangeImplementations(UIView.self,
                                   #selector(UIView.traitCollectionDidChange(_:)),
                                   #selector(UIView.daUIView_traitCollectionDidChange(_:)))

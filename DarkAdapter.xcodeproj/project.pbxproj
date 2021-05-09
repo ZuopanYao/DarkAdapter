@@ -18,7 +18,6 @@
 		185E480E263817A1007DF33B /* DAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4807263817A1007DF33B /* DAImageView.swift */; };
 		18ABF09E264662150067A1B5 /* DATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABF09D264662150067A1B5 /* DATextView.swift */; };
 		7D9DB21B5BD46BC286306B53 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66260C33E44ADCEF868BB3DC /* Pods_Example.framework */; };
-		B9064B6126319F1200E03753 /* DarkAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = B9064B5F26319F1200E03753 /* DarkAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9064B842631AA5900E03753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B832631AA5900E03753 /* AppDelegate.swift */; };
 		B9064B862631AA5900E03753 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B852631AA5900E03753 /* SceneDelegate.swift */; };
 		B9064B882631AA5900E03753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064B872631AA5900E03753 /* ViewController.swift */; };
@@ -28,7 +27,8 @@
 		B9064B992631AA6300E03753 /* DarkAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkAdapter.framework */; };
 		B9064B9A2631AA6300E03753 /* DarkAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9064B5C26319F1200E03753 /* DarkAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9064BAC2631C98B00E03753 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9064BAB2631C98B00E03753 /* View.swift */; };
-		B97FB27C26330061004CE3C4 /* DarkAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97FB27A26330060004CE3C4 /* DarkAdapter.m */; };
+		B99956DE2648106700DD29F4 /* DAAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99956DD2648106700DD29F4 /* DAAdapter.swift */; };
+		B99956E32648124600DD29F4 /* DarkAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = B99956E22648124600DD29F4 /* DarkAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D99999FB43551C9E5B777795 /* Pods_DarkAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C91104FCD09BE97D75F3AB8 /* Pods_DarkAdapter.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,6 @@
 		69B1985FD4131B140815C65E /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7099318B575984D5527777F9 /* Pods-DarkMode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMode.debug.xcconfig"; path = "Target Support Files/Pods-DarkMode/Pods-DarkMode.debug.xcconfig"; sourceTree = "<group>"; };
 		B9064B5C26319F1200E03753 /* DarkAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9064B5F26319F1200E03753 /* DarkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkAdapter.h; sourceTree = "<group>"; };
 		B9064B6026319F1200E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9064B812631AA5900E03753 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9064B832631AA5900E03753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +84,9 @@
 		B9064B8F2631AA5B00E03753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9064B912631AA5B00E03753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9064BAB2631C98B00E03753 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		B97FB27A26330060004CE3C4 /* DarkAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarkAdapter.m; sourceTree = "<group>"; };
 		B97FB28226330732004CE3C4 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		B99956DD2648106700DD29F4 /* DAAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAAdapter.swift; sourceTree = "<group>"; };
+		B99956E22648124600DD29F4 /* DarkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarkAdapter.h; sourceTree = "<group>"; };
 		E410C3A5646760C92E0E52E2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F29841EB6393B818801E95D1 /* Pods-DarkAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkAdapter.debug.xcconfig"; path = "Target Support Files/Pods-DarkAdapter/Pods-DarkAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,16 +157,16 @@
 		B9064B5E26319F1200E03753 /* DarkAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				B99956DD2648106700DD29F4 /* DAAdapter.swift */,
 				185E4804263817A1007DF33B /* DAAttributeStore.swift */,
 				185E4802263817A1007DF33B /* DAButton.swift */,
 				185E4806263817A1007DF33B /* DADarkBasics.swift */,
 				185E4807263817A1007DF33B /* DAImageView.swift */,
 				185E4803263817A1007DF33B /* DAKeys.swift */,
 				185E4801263817A1007DF33B /* DALabel.swift */,
-				185E4805263817A1007DF33B /* DAView.swift */,
+				B99956E22648124600DD29F4 /* DarkAdapter.h */,
 				18ABF09D264662150067A1B5 /* DATextView.swift */,
-				B97FB27A26330060004CE3C4 /* DarkAdapter.m */,
-				B9064B5F26319F1200E03753 /* DarkAdapter.h */,
+				185E4805263817A1007DF33B /* DAView.swift */,
 				B9064B6026319F1200E03753 /* Info.plist */,
 			);
 			path = DarkAdapter;
@@ -197,7 +197,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9064B6126319F1200E03753 /* DarkAdapter.h in Headers */,
+				B99956E32648124600DD29F4 /* DarkAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +380,7 @@
 				185E480C263817A1007DF33B /* DAView.swift in Sources */,
 				185E4809263817A1007DF33B /* DAButton.swift in Sources */,
 				185E480B263817A1007DF33B /* DAAttributeStore.swift in Sources */,
-				B97FB27C26330061004CE3C4 /* DarkAdapter.m in Sources */,
+				B99956DE2648106700DD29F4 /* DAAdapter.swift in Sources */,
 				185E480E263817A1007DF33B /* DAImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

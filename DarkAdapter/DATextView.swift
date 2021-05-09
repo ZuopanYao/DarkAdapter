@@ -18,9 +18,9 @@ extension DADarkBasics where Base: UITextView {
     }
 }
 
-extension UITextView: DASwizzlingProtocolOfUITextView {
+extension UITextView {
     
-    public static func swizzlingMomentOfUITextView() {
+    override class func swizzlingMoment() {
         DAExchangeImplementations(UITextView.self,
                                   #selector(UITextView.traitCollectionDidChange(_:)),
                                   #selector(UITextView.daUITextView_traitCollectionDidChange(_:)))

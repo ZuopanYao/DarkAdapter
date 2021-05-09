@@ -26,9 +26,9 @@ extension DADarkBasics where Base: UIImageView {
     }
 }
 
-extension UIImageView: DASwizzlingProtocolOfUIImageView {
+extension UIImageView {
     
-    public static func swizzlingMomentOfUIImageView() {
+    override class func swizzlingMoment() {
         DAExchangeImplementations(UIImageView.self,
                                   #selector(UIImageView.traitCollectionDidChange(_:)),
                                   #selector(UIImageView.daUIImageView_traitCollectionDidChange(_:)))

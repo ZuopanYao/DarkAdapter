@@ -69,9 +69,9 @@ extension DADarkBasics where Base: UIButton {
     }
 }
 
-extension UIButton: DASwizzlingProtocolOfUIButton {
+extension UIButton {
     
-    public static func swizzlingMomentOfUIButton() {
+    override class func swizzlingMoment() {
         DAExchangeImplementations(UIButton.self,
                                   #selector(UIButton.traitCollectionDidChange(_:)),
                                   #selector(UIButton.daUIButton_traitCollectionDidChange(_:)))

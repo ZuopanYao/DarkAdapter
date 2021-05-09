@@ -51,9 +51,10 @@ func DAAdjustImage(_ lightImageName: String) -> UIImage? {
     guard isDark else {
         return UIImage(named: lightImageName)
     }
-
+    
     let darkImage = "\(lightImageName)\(darkImageSuffix)"
-    guard let _ = Bundle.main.path(forResource: darkImage, ofType: "png") else {
+    let isExistDarkImage = ([darkImage + "@3x", darkImage + "@2x", darkImage].filter { Bundle.main.path(forResource: $0, ofType: "png") != nil }).count > 0
+    guard isExistDarkImage else {
         print("[ DarkAdapter ] Light image: \(lightImageName), not found dark image: \(darkImage)")
         return UIImage(named: lightImageName)
     }
