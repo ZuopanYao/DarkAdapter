@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DarkAdapter"
-  spec.version      = "2.0.1"
+  spec.version      = "2.1.0"
   spec.summary      = "适配黑暗模式库"
 
   # This description is used to generate tags and improve search results.
