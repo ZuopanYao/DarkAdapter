@@ -7,12 +7,22 @@
 
 import Foundation
 
+struct DAValue {
+    weak var target: NSObject?
+    var value: Any?
+    
+    init(_ target: NSObject, _ value: Any?) {
+        self.target = target
+        self.value = value
+    }
+}
+
 class DAAttributeStore {
     
     static let shared = DAAttributeStore()
     
     private init() { }
-    private var attributes: [String: [[NSObject: Any?]]] = [:]
+    private var attributes: [String: [DAValue]] = [:]
     
     subscript(_ key: DAKeys, _ owner: NSObject) -> Any? {
         get { self[key.rawValue, owner] }
@@ -25,20 +35,20 @@ class DAAttributeStore {
                 return nil
             }
             
-            guard let elements = attributes[key]?.filter({ $0.keys.first == owner }), elements.count > 0 else {
+            guard let elements = attributes[key]?.filter({ $0.target == owner }), elements.count > 0 else {
                 return nil
             }
             
-            return elements[0].values.first!
+            return elements[0].value
         }
         set {
             if attributes[key] == nil {
                 attributes[key] = []
             }
             
-            let elements = attributes[key]?.filter{ $0.keys.first != owner } ?? []
+            let elements = attributes[key]?.filter{ $0.target != owner } ?? []
             attributes[key] = elements
-            attributes[key]?.append([owner : newValue])
+            attributes[key]?.append(DAValue(owner, newValue))
         }
     }
 }
