@@ -19,6 +19,7 @@ public struct DAAdapter {
         UIButton.self,
         UITextView.self,
         UIImageView.self,
+        UITextField.self
     ] }()
     
     public static func register() {

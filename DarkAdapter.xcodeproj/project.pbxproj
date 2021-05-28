@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1807452C2660927300F63A6C /* DATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807452B2660927300F63A6C /* DATextField.swift */; };
 		1820A88426353D180073919E /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1820A88226353D180073919E /* light@2x.png */; };
 		1820A88526353D180073919E /* light_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1820A88326353D180073919E /* light_dark@2x.png */; };
 		185E4808263817A1007DF33B /* DALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E4801263817A1007DF33B /* DALabel.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1807452B2660927300F63A6C /* DATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATextField.swift; sourceTree = "<group>"; };
 		1820A88226353D180073919E /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
 		1820A88326353D180073919E /* light_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light_dark@2x.png"; sourceTree = "<group>"; };
 		185E4801263817A1007DF33B /* DALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALabel.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				185E4801263817A1007DF33B /* DALabel.swift */,
 				B99956E22648124600DD29F4 /* DarkAdapter.h */,
 				18ABF09D264662150067A1B5 /* DATextView.swift */,
+				1807452B2660927300F63A6C /* DATextField.swift */,
 				185E4805263817A1007DF33B /* DAView.swift */,
 				B9064B6026319F1200E03753 /* Info.plist */,
 			);
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185E480A263817A1007DF33B /* DAKeys.swift in Sources */,
+				1807452C2660927300F63A6C /* DATextField.swift in Sources */,
 				18ABF09E264662150067A1B5 /* DATextView.swift in Sources */,
 				185E4808263817A1007DF33B /* DALabel.swift in Sources */,
 				185E480D263817A1007DF33B /* DADarkBasics.swift in Sources */,
