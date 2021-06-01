@@ -10,7 +10,7 @@ import UIKit
 /// Defualt is "_dark"
 public var darkImageSuffix: String = "_dark"
 
-public struct DADarkBasics<Base> {
+public class DADarkBasics<Base> {
     
     let base: Base
     init(_ base: Base) {
@@ -21,14 +21,13 @@ public struct DADarkBasics<Base> {
 public protocol DADarkBasicsCompatible {
     
     associatedtype CompatibleType
-    var da: DADarkBasics<CompatibleType> { get set }
+    var da: DADarkBasics<CompatibleType> { get }
 }
 
 public extension DADarkBasicsCompatible {
     
     var da: DADarkBasics<Self> {
         get { DADarkBasics(self) }
-        set { }
     }
 }
 
