@@ -38,11 +38,7 @@ git commit -m "$MODULE-$1"
 git push
 git push wy master
 
-<<<<<<< HEAD
-echo 'Done'
-
 # cocoapods specs
 pod trunk push "../$MODULE/$MODULE.podspec" --allow-warnings
-=======
+
 echo 'Done'
->>>>>>> v2.0.0
