@@ -66,6 +66,44 @@ class ViewController: UIViewController {
 
 ```
 
+### Support Attribute
+
+|UIView|
+|:-----|
+|backgroundColor|
+|shadowColor|
+|borderColor|
+|tintColor|
+|alpha|
+|shadowOpacity|
+
+**Additional**
+
+|UIButton|
+|:-----|
+|image|
+|backgroundImage|
+|title|
+|titleColor|
+
+|UIImageView|
+|:-----|
+|image|
+|highlightedImage|
+
+
+|UILabel|
+|:-----|
+|textColor|
+
+|UITextView|
+|:-----|
+|textColor|
+
+|UITextField|
+|:-----|
+|textColor|
+
 ## License / 许可证
 
 DarkAdapter is released under the MIT license. See LICENSE for details.
