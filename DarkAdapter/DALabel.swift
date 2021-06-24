@@ -18,9 +18,9 @@ extension DADarkBasics where Base: UILabel {
     }
 }
 
-extension UILabel: DASwizzlingProtocolOfUILabel {
+extension UILabel {
     
-    public static func swizzlingMomentOfUILabel() {
+    override class func swizzlingMoment() {
         DAExchangeImplementations(UILabel.self,
                                   #selector(UILabel.traitCollectionDidChange(_:)),
                                   #selector(UILabel.daUILabel_traitCollectionDidChange(_:)))

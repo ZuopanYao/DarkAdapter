@@ -1,13 +1,13 @@
 //
-//  DATextView.swift
+//  DATextField.swift
 //  DarkAdapter
 //
-//  Created by Harvey on 2021/5/8.
+//  Created by Harvey on 2021/5/28.
 //
 
 import UIKit
 
-extension DADarkBasics where Base: UITextView {
+extension DADarkBasics where Base: UITextField {
     
     public var textColor: DAColor? {
         get { attributeStore[.textColor, self.base] as? DAColor }
@@ -18,16 +18,16 @@ extension DADarkBasics where Base: UITextView {
     }
 }
 
-extension UITextView {
+extension UITextField {
     
     override class func swizzlingMoment() {
-        DAExchangeImplementations(UITextView.self,
-                                  #selector(UITextView.traitCollectionDidChange(_:)),
-                                  #selector(UITextView.daUITextView_traitCollectionDidChange(_:)))
+        DAExchangeImplementations(UITextField.self,
+                                  #selector(UITextField.traitCollectionDidChange(_:)),
+                                  #selector(UITextField.daUITextField_traitCollectionDidChange(_:)))
     }
     
-     @objc func daUITextView_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        self.daUITextView_traitCollectionDidChange(previousTraitCollection)
+     @objc func daUITextField_traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.daUITextField_traitCollectionDidChange(previousTraitCollection)
         updateDisplay()
     }
     

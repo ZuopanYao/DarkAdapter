@@ -10,7 +10,7 @@ import UIKit
 /// Defualt is "_dark"
 public var darkImageSuffix: String = "_dark"
 
-public struct DADarkBasics<Base> {
+public class DADarkBasics<Base> {
     
     let base: Base
     init(_ base: Base) {
@@ -21,14 +21,13 @@ public struct DADarkBasics<Base> {
 public protocol DADarkBasicsCompatible {
     
     associatedtype CompatibleType
-    var da: DADarkBasics<CompatibleType> { get set }
+    var da: DADarkBasics<CompatibleType> { get }
 }
 
 public extension DADarkBasicsCompatible {
     
     var da: DADarkBasics<Self> {
         get { DADarkBasics(self) }
-        set { }
     }
 }
 
@@ -51,7 +50,7 @@ func DAAdjustImage(_ lightImageName: String) -> UIImage? {
     guard isDark else {
         return UIImage(named: lightImageName)
     }
-
+    
     let darkImage = "\(lightImageName)\(darkImageSuffix)"
     let isExistDarkImage = ([darkImage + "@3x", darkImage + "@2x", darkImage].filter { Bundle.main.path(forResource: $0, ofType: "png") != nil }).count > 0
     guard isExistDarkImage else {

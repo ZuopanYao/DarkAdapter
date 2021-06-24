@@ -20,8 +20,12 @@ git add $MODULE.podspec
 git commit -m "modify $MODULE.podspec for $1"
 git tag -a $1 -m "$1"
 
+# 推送
+#git push wy master
+
 # 把 tag 提交到远程仓库
 git push origin : $1
+#git push wy : $1
 
 # cocoapods 索引更新
 cd ../$SPECS
@@ -32,8 +36,13 @@ cp ../$MODULE/$MODULE.podspec $MODULE/$1/$MODULE.podspec
 git add *
 git commit -m "$MODULE-$1"
 git push
+git push wy master
 
+<<<<<<< HEAD
 echo 'Done'
 
 # cocoapods specs
 pod trunk push "../$MODULE/$MODULE.podspec" --allow-warnings
+=======
+echo 'Done'
+>>>>>>> v2.0.0
