@@ -49,6 +49,21 @@ class ViewController: UIViewController {
 ```
 
 ### Make use of DarkAdapter
+AppDelegate
+
+```swift
+import DarkAdapter
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        /// Register 注册
+        DAAdapter.register()
+        
+        return true
+    }
+```
+
+Usage
 
 ```swift
 import DarkAdapter
